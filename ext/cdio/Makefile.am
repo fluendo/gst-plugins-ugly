@@ -16,7 +16,9 @@ libgstcdio_la_LIBADD = \
 	$(CDIO_LIBS)
 
 libgstcdio_la_LDFLAGS = $(GST_PLUGIN_LDFLAGS) 
+if !GST_PLUGIN_BUILD_STATIC
 libgstcdio_la_LIBTOOLFLAGS = --tag=disable-static
+endif
 
 noinst_HEADERS = \
 	gstcdio.h \

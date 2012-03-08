@@ -739,8 +739,8 @@ plugin_init (GstPlugin * plugin)
       GST_TYPE_SIDDEC);
 }
 
-GST_PLUGIN_DEFINE (GST_VERSION_MAJOR,
+GST_PLUGIN_DEFINE2 (GST_VERSION_MAJOR,
     GST_VERSION_MINOR,
-    "siddec",
+    siddec,
     "Uses libsidplay to decode .sid files",
     plugin_init, VERSION, "GPL", GST_PACKAGE_NAME, GST_PACKAGE_ORIGIN);

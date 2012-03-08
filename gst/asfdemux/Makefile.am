@@ -8,7 +8,9 @@ libgstasf_la_LIBADD = $(GST_PLUGINS_BASE_LIBS) \
 		$(GST_BASE_LIBS) $(GST_LIBS) \
 		$(WIN32_LIBS)
 libgstasf_la_LDFLAGS = $(GST_PLUGIN_LDFLAGS)
+if !GST_PLUGIN_BUILD_STATIC
 libgstasf_la_LIBTOOLFLAGS = --tag=disable-static
+endif
 
 noinst_HEADERS = gstasfdemux.h asfheaders.h asfpacket.h gstrtpasfdepay.h gstrtspwms.h
 

@@ -10,7 +10,9 @@ libgstamrwbdec_la_LIBADD = $(GST_PLUGINS_BASE_LIBS) \
 	-lgstaudio-@GST_MAJORMINOR@ \
 	$(GST_BASE_LIBS) $(GST_LIBS) $(AMRWB_LIBS)
 libgstamrwbdec_la_LDFLAGS = $(GST_PLUGIN_LDFLAGS)
+if !GST_PLUGIN_BUILD_STATIC
 libgstamrwbdec_la_LIBTOOLFLAGS = --tag=disable-static
+endif
 
 noinst_HEADERS = \
 	amrwbdec.h

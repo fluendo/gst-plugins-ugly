@@ -34,9 +34,9 @@ plugin_init (GstPlugin * plugin)
 }
 
 
-GST_PLUGIN_DEFINE (GST_VERSION_MAJOR,
+GST_PLUGIN_DEFINE2 (GST_VERSION_MAJOR,
     GST_VERSION_MINOR,
-    "amrnb",
+    amrnb,
     "Adaptive Multi-Rate Narrow-Band",
     plugin_init, VERSION, GST_LICENSE_UNKNOWN, GST_PACKAGE_NAME,
     GST_PACKAGE_ORIGIN);

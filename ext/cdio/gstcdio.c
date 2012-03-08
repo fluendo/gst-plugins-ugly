@@ -117,8 +117,8 @@ plugin_init (GstPlugin * plugin)
 }
 
 
-GST_PLUGIN_DEFINE (GST_VERSION_MAJOR,
+GST_PLUGIN_DEFINE2 (GST_VERSION_MAJOR,
     GST_VERSION_MINOR,
-    "cdio",
+    cdio,
     "Read audio from audio CDs",
     plugin_init, VERSION, "GPL", GST_PACKAGE_NAME, GST_PACKAGE_ORIGIN)

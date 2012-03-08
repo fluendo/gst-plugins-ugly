@@ -7,6 +7,8 @@ libgsttwolame_la_LIBADD = $(GST_PLUGINS_BASE_LIBS) \
 	-lgstaudio-@GST_MAJORMINOR@ -lgstpbutils-@GST_MAJORMINOR@ \
 	$(GST_LIBS) $(TWOLAME_LIBS)
 libgsttwolame_la_LDFLAGS = $(GST_PLUGIN_LDFLAGS)
+if !GST_PLUGIN_BUILD_STATIC
 libgsttwolame_la_LIBTOOLFLAGS = --tag=disable-static
+endif
 
 noinst_HEADERS = gsttwolame.h

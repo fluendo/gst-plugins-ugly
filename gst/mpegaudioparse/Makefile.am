@@ -4,7 +4,9 @@ libgstmpegaudioparse_la_SOURCES = plugin.c gstmpegaudioparse.c gstxingmux.c
 libgstmpegaudioparse_la_CFLAGS = $(GST_BASE_CFLAGS) $(GST_CFLAGS)
 libgstmpegaudioparse_la_LIBADD = $(GST_BASE_LIBS) $(GST_LIBS)
 libgstmpegaudioparse_la_LDFLAGS = $(GST_PLUGIN_LDFLAGS)
+if !GST_PLUGIN_BUILD_STATIC
 libgstmpegaudioparse_la_LIBTOOLFLAGS = --tag=disable-static
+endif
 
 noinst_HEADERS = gstmpegaudioparse.h gstxingmux.h
 
