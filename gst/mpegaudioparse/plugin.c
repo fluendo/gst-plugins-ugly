@@ -22,7 +22,6 @@
 #endif
 
 #include <gst/gst.h>
-#include "gstmpegaudioparse.h"
 #include "gstxingmux.h"
 
 static gboolean
@@ -30,9 +29,6 @@ plugin_init (GstPlugin * plugin)
 {
   if (!gst_element_register (plugin, "xingmux", GST_RANK_NONE,
           GST_TYPE_XING_MUX))
-    return FALSE;
-  if (!gst_element_register (plugin, "mp3parse", GST_RANK_PRIMARY + 1,
-          GST_TYPE_MP3PARSE))
     return FALSE;
 
   return TRUE;
